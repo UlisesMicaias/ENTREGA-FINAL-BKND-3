@@ -1,0 +1,24 @@
+<!-- views/productDetail.handlebars -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Detalle del Producto</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>{{product.title}}</h1>
+    <p>Artista: {{product.artist}}</p>
+    <p>Género: {{product.genre}}</p>
+    <p>Año: {{product.year}}</p>
+    <p>Precio: ${{product.price}}</p>
+
+    <label for="stockInput">Stock:</label>
+    <input type="number" id="stockInput" value="{{product.stock}}" min="0" />
+    <button id="updateStockBtn" data-id="{{product._id}}">Actualizar Stock</button>
+
+    <script src="/js/modules/producDetail.js"></script>
+</body>
+</html>
+
+

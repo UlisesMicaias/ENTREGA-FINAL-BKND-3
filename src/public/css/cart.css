@@ -1,0 +1,11 @@
+#cartItems {
+    list-style: none;
+    padding: 0;
+}
+
+#cartItems li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

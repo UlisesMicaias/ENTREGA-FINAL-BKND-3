@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Carrito</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <div id="cartContainer">
+        {{#each cart.products}}
+            <div class="cart-item">
+                <h3>{{this.product.title}}</h3>
+                <p>Cantidad: {{this.quantity}}</p>
+                <button class="remove-from-cart-btn" data-id="{{this.product._id}}">Eliminar del carrito</button>
+            </div>
+        {{/each}}
+    </div>
+
+    <script src="/js/modules/cart.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

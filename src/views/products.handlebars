@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Productos</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Productos</h1>
+    <div id="productsContainer">
+        {{#each products}}
+            <div class="product">
+                <h3>{{this.title}}</h3>
+                {{#if this.description}}<p>{{this.description}}</p>{{/if}}
+                <p>$ {{this.price}}</p>
+                <button class="add-to-cart-btn" data-id="{{this._id}}">Agregar al carrito</button>
+                <button class="delete-product-btn" data-id="{{this._id}}">Eliminar</button>
+            </div>
+        {{/each}}
+    </div>
+
+    <script src="/js/modules/products.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
+
+
+
