@@ -25,6 +25,4 @@ Proyecto de una tienda online de CDs y álbumes musicales, con:
 
 
 
-# proyectoFinalBKFlex
-
-cambio
+# proyectoFinalBKFlex# ENTREGA-FINAL-BKND-3
