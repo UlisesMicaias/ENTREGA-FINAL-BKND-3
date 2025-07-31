@@ -11,6 +11,8 @@ Proyecto de una tienda online de CDs y álbumes musicales, con:
 - CRUD completo de productos y carrito.
 - Frontend modularizado con JavaScript usando solo Socket.IO para comunicación (sin Axios ni fetch).
 
+## DOCKERHUB
+https://hub.docker.com/repository/docker/ulisesmicaias/proyecto-bk3/general
 ---
 
 ## Tecnologías usadas
