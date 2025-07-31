@@ -6,6 +6,7 @@ import { createServer } from "http";
 import { fileURLToPath } from "url";
 import { Server as SocketServer } from "socket.io";
 import { connectDB } from "./config/db.js";
+import swaggerConfig from './docs/swagger.js'
 
 import ProductsManager from "./utils/ProductManager.js";
 import CartManager from "./utils/CartManager.js";
@@ -26,6 +27,8 @@ const io = new SocketServer(httpServer);
 
 connectDB();
 
+swaggerConfig(app);
+
 const productsManager = new ProductsManager();
 const cartManager = new CartManager();
 
@@ -39,6 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
+
 
 app.get("/", (req, res) => {
     res.redirect("/products");
@@ -63,9 +67,15 @@ app.get("/cart", async (req, res) => {
 
 configureSockets(io, productsManager, cartManager);
 
-const PORT = process.env.PORT || 8080;
-httpServer.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
-});
+
+if (process.env.NODE_ENV !== 'test') {
+    const PORT = process.env.PORT || 8080;
+    httpServer.listen(PORT, () => {
+        console.log(`Servidor escuchando en http://localhost:${PORT}`);
+    });
+}
+
+export default app;
+
 
 

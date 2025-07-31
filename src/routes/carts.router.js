@@ -15,7 +15,6 @@ router.get('/:cid', async (req, res) => {
     }
 });
 
-cío
 router.post('/', async (req, res) => {
     try {
         const newCart = await cartManager.createCart();

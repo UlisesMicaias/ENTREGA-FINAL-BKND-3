@@ -1,5 +1,12 @@
 # Ignorar node_modules
-node_modules/
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.env
+
 
 # Ignorar archivos de logs
 logs/
@@ -8,8 +15,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignorar archivos de entorno
-.env
 
 # Ignorar carpetas de build
 dist/
