@@ -16,6 +16,8 @@ Proyecto de una tienda online de CDs y álbumes musicales, con:
 ## Tecnologías usadas
 
 - Node.js
+- Docker
+- Docs
 - Express.js
 - MongoDB + Mongoose + mongoose-paginate-v2
 - dotenv (variables de entorno)
@@ -25,5 +27,5 @@ Proyecto de una tienda online de CDs y álbumes musicales, con:
 
 
 
-# proyectoFinalBKFlex# ENTREGA-FINAL-BKND-3
+
 # ENTREGA-FINAL-BKND-3
